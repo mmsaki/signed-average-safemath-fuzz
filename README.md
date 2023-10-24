@@ -4,7 +4,7 @@ In this repo I will be fuzzing OpenZeppelin SafeMath library with woke.
 
 ## Getting Started
 
-> **NOTE** You can set up your you woke environment with my [Template here](https://github.com/mmsaki/woke-template) or clone this repo
+> **Note** You can set up your you woke environment with my [Template here](https://github.com/mmsaki/woke-template) or clone this repo
 
 1. Setup your environment
 
