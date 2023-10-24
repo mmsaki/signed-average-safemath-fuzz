@@ -1,4 +1,4 @@
-# OpenZeppelin fuzz
+# OpenZeppelin's SafeMath fuzzing
 
 In this repo I will be fuzzing OpenZeppelin SafeMath library with woke.
 
@@ -34,18 +34,18 @@ In this repo I will be fuzzing OpenZeppelin SafeMath library with woke.
 
 ## Fuzzing
 
+1. Let's fuzz the signed math average function in `./tests/test_signed_math.py`
+
+   ```js
+   function average(int256 a, int256 b) internal pure returns (int256) {
+       // Formula from the book "Hacker's Delight"
+       int256 x = (a & b) + ((a ^ b) >> 1);
+       return x + (int256(uint256(x) >> 255) & (a ^ b));
+   }
+   ```
+
 1. Run woke fuzzer
 
    ```sh
    woke fuzz tests/test_signed_math.py -n 8
    ```
-
-## Average function
-
-```js
-function average(int256 a, int256 b) internal pure returns (int256) {
-		// Formula from the book "Hacker's Delight"
-		int256 x = (a & b) + ((a ^ b) >> 1);
-		return x + (int256(uint256(x) >> 255) & (a ^ b));
-}
-```
