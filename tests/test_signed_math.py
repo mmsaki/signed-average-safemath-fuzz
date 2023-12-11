@@ -23,11 +23,11 @@ class MathTest(FuzzTest):
 
         # FLOOR : rounding towards zero
         self.avg = self.signed_math.avgFloor(a, b) # floor
-        # self.actual = int(Decimal(a + b) / 2) # floor
+        self.actual = int(Decimal(a + b) / 2) # floor
 
         # # CEIL
         # self.avg = self.signed_math.avgCeil(a, b) # ceil
-        self.actual = math.ceil(Decimal(a + b) / 2) # ceil
+        # self.actual = math.ceil(Decimal(a + b) / 2) # ceil
 
 
     @flow()
